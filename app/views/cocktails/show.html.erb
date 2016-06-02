@@ -1,3 +1,15 @@
 <h1>This is your cocktail</h1>
 <h3><%= @cocktail.name  %></h3>
+<% if @cocktail.doses  %>
+<% doses = @cocktail.doses  %>
+<ul>
+  <% doses.each do |dose|  %>
+  <li>
+  <%= dose.description  %>
+  <%= dose.ingredient.name  %>
+  </li>
+  <% end  %>
+</ul>
+<% end  %>
+<%= link_to 'add a dose', new_cocktail_dose_path(@cocktail)  %> <br>
 <%= link_to 'back to index', cocktails_path  %>

@@ -1,11 +1,10 @@
-<h1>Add your cocktail</h1>
-<div>
-  <%= form_for(@cocktail) do |f| %>
-  <div>
-    <%= f.label :name %> <br>
-    <%= f.text_field :name %>
-  </div>
-  <%= f.submit %>
-  <% end %>
-  <%= link_to 'back to index', cocktails_path  %>
-</div>
+<h1>Add your dose</h1>
+
+<%= form_for [@cocktail, @dose] do |f| %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<br>
+<%= f.label :ingredient %>
+<%= f.collection_select :ingredient_id, Ingredient.all, :id, :name %>
+<%= f.submit "add a dose"%>
+<% end %>

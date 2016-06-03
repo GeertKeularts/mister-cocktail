@@ -5,6 +5,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
